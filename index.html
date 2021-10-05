@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <body>
-<title>swnt.io - future url shortener</title>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <title>swnt.io - future url shortener</title>
+<body onload="redirect()"></body>
+<button onclick="redirect()">Click to redirect</button>
+
+<script>
+function redirecttest() {
+    location.replace("https://www.google.com")
+}
+
+function redirect() {
+    fetch('./data.json')
+    .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
+    .then(data => console.log(data));
+    
+    //location.replace(data.current[0].longurl);
+    //currentpage = window.location.pathname;
+}
+</script>
+
 </body>
 </html>
