@@ -4,23 +4,13 @@
 <body>
 
     <title>swnt.io - future url shortener</title>
-<body onload="redirect()"></body>
-<button onclick="redirecttest()">Click to redirect</button>
 
-<script>
-function redirecttest() {
-    location.replace("https://www.google.com")
-}
+    <body onload="console.log(location.pathname)""></body>
+    <button onclick="console.log(location.pathname)">Click to redirect</button>
 
-function redirect() {
-    fetch('./data.json')
-    .then(res => res.json()) // the .json() method parses the JSON response into a JS object literal
-    .then(data => console.log(data));
-    
-    //location.replace(data.current[0].longurl);
-    //currentpage = window.location.pathname;
-}
-</script>
+    <script src="./shorturllongurl.js">
+    </script>
 
 </body>
+
 </html>
