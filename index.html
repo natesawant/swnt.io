@@ -5,18 +5,33 @@
 
     <title>swnt.io - future url shortener</title>
 
-    <body onload="printPath()"></body>
+    <!--<body onload="printPath()"></body>-->
+    
 
 
     <p id="path"></p>
 
-    <button onclick="printPath()">Click to redirect</button>
+    <button onclick="replaceLongURL()">Click to redirect</button>
 
-    <script src="./shorturllongurl.js.getlongurl(location.pathname)"></script>
+    <!--
+    <script src="./shorturllongurl.js.getlongurl(TEST1)"></script>
     <script>
         function printPath() {
             var p = location.pathname;
             document.getElementById("path").innerHTML = p;
+        }
+    </script>
+    -->
+
+    <script type="text/javascript" src="./shorturllongurl.js">
+        function replaceLongURL() {
+            var script = document.createElement("script");
+            //var p = location.pathname;
+            var p = "TEST1"
+            script.type = "text/javascript";
+            script.src = "./shorturllongurl.js";
+            var l = script.getlongurl(p);
+            location.replace(p);
         }
     </script>
 
