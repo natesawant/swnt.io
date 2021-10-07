@@ -6,14 +6,26 @@
     <title>swnt.io - future url shortener</title>
 
     <!--<body onload="printPath()"></body>-->
-    
 
+    <!--
 
     <p id="path"></p>
 
+    <script id="short" type="text/javascript" src="./shorturllongurl.js">
+        function replaceLongURL() {
+            //var script = document.createElement("script");
+            //var p = location.pathname;
+            var p = "TEST1"
+            //script.type = "text/javascript";
+            //script.src = "./shorturllongurl.js";
+            var l = getlongurl(p);
+            location.replace(p);
+        }
+    </script>
+
     <button onclick="replaceLongURL()">Click to redirect</button>
 
-    <!--
+    
     <script src="./shorturllongurl.js.getlongurl(TEST1)"></script>
     <script>
         function printPath() {
@@ -22,18 +34,28 @@
         }
     </script>
     -->
+    <script type="text/javascript" src="./shorturllongurl.js"></script>
 
-    <script type="text/javascript" src="./shorturllongurl.js">
-        function replaceLongURL() {
-            var script = document.createElement("script");
-            //var p = location.pathname;
-            var p = "TEST1"
-            script.type = "text/javascript";
-            script.src = "./shorturllongurl.js";
-            var l = script.getlongurl(p);
-            location.replace(p);
-        }
-    </script>
+    <button id='mylink'>click me</a>
+
+        <script type="text/javascript">
+
+            var myLink = document.getElementById('mylink');
+
+            myLink.onclick = function () {
+
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "./shorturllongurl.js.";
+                var p = "TEST1"
+                var l = getlongurl(p);
+                location.replace(p);
+                return false;
+
+            }
+
+
+        </script>
 
 </body>
 
